@@ -3,6 +3,11 @@
 # See the file LICENSE for licensing terms.
 
 source ../../scripts/common/tests.integration.sh
+source ../../scripts/constants.sh
+
+set_cgo_flags
+rm_previous_cov_reports
+prepare_ginkgo
 
 # run with 3 embedded VMs
 ACK_GINKGO_RC=true ginkgo \
